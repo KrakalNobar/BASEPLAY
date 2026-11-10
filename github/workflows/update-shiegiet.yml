@@ -1,29 +1,33 @@
-name: Update Shiegiet Playlist
+name: Update Zafran and Shiegiet Playlist
 
 on:
-  push:
-    paths:
-      - 'BASED' # Otomatis berjalan saat file BASED diubah/di-push
-  workflow_dispatch: # Bisa dijalankan manual dari tab Actions
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
-  update:
+  run-python:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-            python-version: '3.10'
+          python-version: '3.10'
 
-      - name: Run Filtering Script
+      - name: Install dependencies
+        run: pip install requests
+
+      # PASTIKAN INI MENGEKSEKUSI filter_playlist.py
+      - name: Run filter script
         run: python filter_playlist.py
 
-      - name: Commit and Push if changes detected
+      - name: Commit and push results
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add shiegiet
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update shiegiet filtered playlist" && git push)
+          git add shiegiet zafran
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update playlists zafran and shiegiet"
+          git push
