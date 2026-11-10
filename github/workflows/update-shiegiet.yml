@@ -1,0 +1,29 @@
+name: Update Shiegiet Playlist
+
+on:
+  push:
+    paths:
+      - 'BASED' # Otomatis berjalan saat file BASED diubah/di-push
+  workflow_dispatch: # Bisa dijalankan manual dari tab Actions
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+            python-version: '3.10'
+
+      - name: Run Filtering Script
+        run: python filter_playlist.py
+
+      - name: Commit and Push if changes detected
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add shiegiet
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update shiegiet filtered playlist" && git push)
