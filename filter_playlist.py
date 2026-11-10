@@ -4,7 +4,6 @@ BASE_URL = "https://raw.githubusercontent.com/KrakalNobar/BASEPLAY/main/BASED"
 OUTPUT_SHIEGIET = "shiegiet"
 OUTPUT_ZAFRAN = "zafran"
 
-# 1. Daftar Channel Paket Ekonomi (Shiegiet)
 ECONOMY_CHANNELS = [
     ("TVONE", ["tvone", "tv one"]),
     ("RCTI", ["rcti"]),
@@ -27,39 +26,36 @@ ECONOMY_CHANNELS = [
     ("SINDONEWS", ["sindonews"]),
 ]
 
-# 2. Tambahan Kategori Sport (Olahraga)
 SPORT_CHANNELS = [
     ("SPORT", ["sport", "bein", "champions", "soccer", "football", "wwe", "ufc", "nba", "formula", "espn", "bola"])
 ]
 
-# 3. Tambahan Kategori Film yang Lebih Luas
 FILM_CHANNELS = [
     ("FILM", ["film", "cinema", "movie", "boxoffice", "hbo", "fox movies", "axn", "celestial", "bioskop", "movies", "cinemax", "paramount", "tlc"])
 ]
 
 ZAFRAN_CHANNELS = ECONOMY_CHANNELS + SPORT_CHANNELS + FILM_CHANNELS
 
-def download_playlist():
-    req = urllib.request.Request(
-        BASE_URL,
-        headers={"User-Agent": "Mozilla/5.0"}
-    )
-    with urllib.request.urlopen(req) as response:
-        return response.read().decode("utf-8").splitlines()
-
 def process_playlists():
-    lines = download_playlist()
-    if not lines:
-        print("File BASED kosong atau gagal diunduh.")
+    print("Mengunduh file BASED...")
+    req = urllib.request.Request(BASE_URL, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req) as response:
+            lines = response.read().decode("utf-8").splitlines()
+    except Exception as e:
+        print(f"Gagal mengunduh: {e}")
         return
 
-    header = lines[0] if lines[0].startswith("#EXTM3U") else "#EXTM3U\n"
+    print(f"Total baris dalam BASED: {len(lines)}")
+    
+    header = lines[0] if lines and lines[0].startswith("#EXTM3U") else "#EXTM3U\n"
     
     shiegiet_blocks = [header]
     zafran_blocks = [header]
 
     count_shiegiet = 0
     count_zafran = 0
+    sample_printed = 0
 
     i = 1
     while i < len(lines):
@@ -73,12 +69,15 @@ def process_playlists():
             
             block_text = "".join(block).lower()
             
-            # Cek Shiegiet
+            # Debug cetak 5 channel pertama untuk melihat format teksnya di log
+            if sample_printed < 5:
+                print(f"[DEBUG SAMPLE] {block_text.strip()}")
+                sample_printed += 1
+            
             if any(any(kw in block_text for kw in kws) for _, kws in ECONOMY_CHANNELS):
                 shiegiet_blocks.extend(block)
                 count_shiegiet += 1
                 
-            # Cek Zafran (Ekonomi + Sport + Film)
             if any(any(kw in block_text for kw in kws) for _, kws in ZAFRAN_CHANNELS):
                 zafran_blocks.extend(block)
                 count_zafran += 1
@@ -91,7 +90,7 @@ def process_playlists():
     with open(OUTPUT_ZAFRAN, "w", encoding="utf-8") as f:
         f.writelines(zafran_blocks)
 
-    print(f"Berhasil! Shiegiet: {count_shiegiet} channel, Zafran: {count_zafran} channel.")
+    print(f"Selesai! Shiegiet: {count_shiegiet}, Zafran: {count_zafran}")
 
 if __name__ == "__main__":
     process_playlists()
