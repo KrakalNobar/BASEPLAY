@@ -4,38 +4,6 @@ BASE_URL = "https://raw.githubusercontent.com/KrakalNobar/BASEPLAY/main/BASED"
 OUTPUT_SHIEGIET = "shiegiet"
 OUTPUT_ZAFRAN = "zafran"
 
-ECONOMY_CHANNELS = [
-    ("TVONE", ["tvone", "tv one"]),
-    ("RCTI", ["rcti"]),
-    ("MNCTV", ["mnctv", "mnc tv"]),
-    ("GTV", ["gtv", "global tv"]),
-    ("ANTV", ["antv"]),
-    ("TRANSTV", ["transtv", "trans tv"]),
-    ("TRANS7", ["trans7", "trans 7"]),
-    ("INDOSIAR", ["indosiar"]),
-    ("SCTV", ["sctv"]),
-    ("METRO", ["metrotv", "metro tv"]),
-    ("KOMPASTV", ["kompastv", "kompas tv"]),
-    ("CNN", ["cnn indonesia", "cnn j"]),
-    ("INEWS", ["inews"]),
-    ("RTV", ["rtv", "rajawalitv"]),
-    ("MDTV", ["mdtv"]),
-    ("JOWO", ["jowo", "channel jowo"]),
-    ("HANACARAKA", ["hanacaraka"]),
-    ("CNBC", ["cnbc indonesia", "cnbc"]),
-    ("SINDONEWS", ["sindonews"]),
-]
-
-SPORT_CHANNELS = [
-    ("SPORT", ["sport", "bein", "champions", "soccer", "football", "wwe", "ufc", "nba", "formula", "espn", "bola"])
-]
-
-FILM_CHANNELS = [
-    ("FILM", ["film", "cinema", "movie", "boxoffice", "hbo", "fox movies", "axn", "celestial", "bioskop", "movies", "cinemax", "paramount", "tlc"])
-]
-
-ZAFRAN_CHANNELS = ECONOMY_CHANNELS + SPORT_CHANNELS + FILM_CHANNELS
-
 def process_playlists():
     print("Mengunduh file BASED...")
     req = urllib.request.Request(BASE_URL, headers={"User-Agent": "Mozilla/5.0"})
@@ -55,7 +23,6 @@ def process_playlists():
 
     count_shiegiet = 0
     count_zafran = 0
-    sample_printed = 0
 
     i = 1
     while i < len(lines):
@@ -69,16 +36,19 @@ def process_playlists():
             
             block_text = "".join(block).lower()
             
-            # Debug cetak 5 channel pertama untuk melihat format teksnya di log
-            if sample_printed < 5:
-                print(f"[DEBUG SAMPLE] {block_text.strip()}")
-                sample_printed += 1
+            # Kriteria Shiegiet (Khusus Ekonomi/Lokal)
+            is_economy = any(k in block_text for k in ["tvone", "rcti", "mnctv", "gtv", "antv", "transtv", "trans7", "indosiar", "sctv", "metrotv", "kompastv", "inews", "rtv"])
             
-            if any(any(kw in block_text for kw in kws) for _, kws in ECONOMY_CHANNELS):
+            # Kriteria Zafran: Mencakup Ekonomi + Sport + Film (Kata kunci diperluas agar mudah tertangkap)
+            is_sport = any(k in block_text for k in ["sport", "bein", "champions", "soccer", "football", "ufc", "nba", "espn", "bola", "sport"])
+            is_film = any(k in block_text for k in ["film", "cinema", "movie", "boxoffice", "hbo", "fox", "axn", "celestial", "bioskop", "movies", "cinemax", "paramount", "tlc", "zee"])
+
+            if is_economy:
                 shiegiet_blocks.extend(block)
                 count_shiegiet += 1
                 
-            if any(any(kw in block_text for kw in kws) for _, kws in ZAFRAN_CHANNELS):
+            # Masukkan ke zafran jika termasuk ekonomi, sport, ATAU film
+            if is_economy or is_sport or is_film:
                 zafran_blocks.extend(block)
                 count_zafran += 1
         else:
