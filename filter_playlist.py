@@ -14,49 +14,63 @@ def process_playlists():
         print(f"Gagal mengunduh: {e}")
         return
 
-    # Pisahkan entry berdasarkan tag #EXTINF
-    entries = content.split("#EXTINF:")
-    header = entries[0].strip() if entries else "#EXTM3U"
+    # Pisahkan entry playlist berdasarkan baris #EXTINF
+    lines = content.splitlines()
+    header = lines[0] if lines and lines[0].startswith("#EXTM3U") else "#EXTM3U"
     
-    shiegiet_channels = [header]
-    zafran_channels = [header]
+    shiegiet_blocks = [header]
+    zafran_blocks = [header]
 
-    # Keyword Ekonomi untuk Shiegiet (Sama persis seperti semula)
+    # 39 Daftar keyword paketan Ekonomi (Shiegiet) yang ketat & akurat
     economy_keywords = [
-        "tvone", "rcti", "mnctv", "gtv", "antv", "transtv", "trans7",
-        "indosiar", "sctv", "metrotv", "kompastv", "cnn", "inews",
-        "rtv", "mdtv", "jowo", "hanacaraka", "cnbc", "sindonews"
+        "tvone", "tv one", "rcti", "mnctv", "mnc tv", "gtv", "global tv",
+        "antv", "transtv", "trans tv", "trans7", "trans 7", "indosiar", 
+        "sctv", "metrotv", "metro tv", "kompastv", "kompas tv", "cnn indonesia", 
+        "cnn j", "inews", "rtv", "rajawalitv", "mdtv", "jowo", "channel jowo", 
+        "hanacaraka", "cnbc indonesia", "cnbc", "sindonews"
     ]
 
-    # Keyword tambahan untuk Zafran (Sport & Film)
+    # Keyword tambahan khusus untuk Zafran (Sport & Film)
     sport_keywords = ["sport", "bein", "champions", "soccer", "football", "wwe", "ufc", "nba", "formula", "espn", "bola"]
     film_keywords = ["film", "cinema", "movie", "boxoffice", "hbo", "fox", "axn", "celestial", "bioskop", "movies", "cinemax", "paramount", "tlc", "zee"]
 
-    for entry in entries[1:]:
-        block = "#EXTINF:" + entry
-        block_lower = block.lower()
+    i = 1
+    while i < len(lines):
+        line = lines[i]
+        if line.startswith("#EXTINF"):
+            # Ambil blok channel (baris #EXTINF dan baris link di bawahnya)
+            block = [line]
+            i += 1
+            while i < len(lines) and not lines[i].startswith("#EXTINF") and not lines[i].startswith("#EXTM3U"):
+                block.append(lines[i])
+                i += 1
+            
+            block_text = "\n".join(block).lower()
+            
+            # Cek kecocokan kategori
+            # Shiegiet harus benar-benar spesifik nama channel ekonomi agar tidak kelolosan
+            is_economy = any(k in block_text for k in economy_keywords)
+            is_sport = any(k in block_text for k in sport_keywords)
+            is_film = any(k in block_text for k in film_keywords)
 
-        # Cek kategori
-        is_economy = any(k in block_lower for k in economy_keywords)
-        is_sport = any(k in block_lower for k in sport_keywords)
-        is_film = any(k in block_lower for k in film_keywords)
+            # Shiegiet murni hanya mengambil list ekonomi
+            if is_economy:
+                shiegiet_blocks.extend(block)
+                
+            # Zafran mengambil Ekonomi + Sport + Film
+            if is_economy or is_sport or is_film:
+                zafran_blocks.extend(block)
+        else:
+            i += 1
 
-        # Shiegiet MURNI hanya ekonomi
-        if is_economy:
-            shiegiet_channels.append(block.strip())
-
-        # Zafran adalah Ekonomi + Sport + Film
-        if is_economy or is_sport or is_film:
-            zafran_channels.append(block.strip())
-
-    # Simpan hasil ke file
+    # Simpan kembali dengan format baris yang rapi
     with open(OUTPUT_SHIEGIET, "w", encoding="utf-8") as f:
-        f.write("\n".join(shiegiet_channels) + "\n")
+        f.write("\n".join(shiegiet_blocks) + "\n")
         
     with open(OUTPUT_ZAFRAN, "w", encoding="utf-8") as f:
-        f.write("\n".join(zafran_channels) + "\n")
+        f.write("\n".join(zafran_blocks) + "\n")
 
-    print(f"Selesai! Shiegiet: {len(shiegiet_channels)-1} channel, Zafran: {len(zafran_channels)-1} channel.")
+    print("Penyaringan selesai dengan aman!")
 
 if __name__ == "__main__":
     process_playlists()
