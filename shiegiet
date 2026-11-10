@@ -1,2 +1,275 @@
-#EXTM3U
-#EXTINF:-1 tvg-logo="https://i.ibb.co.com/7t2mbspy/TVONE.png" group-title="INDONESIA 🇮🇩",TvOne#EXTVLCOPT:http-referrer=http://www.dens.tv/#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36http://op-flashcon-digdayahd-1.dens.tv/h/h40/index.m3u8  #EXTINF:-1 tvg-id="RCTI.id" tvg-logo="https://static.rctiplus.id/media/400/files/fta_rcti/Channel_Logo/RCTI.png" group-title="Indonesia Channels",RCTI (V+)#EXTVLCOPT:http-user-agent=android-R+#KODIPROP:inputstream=inputstream.adaptive#KODIPROP:inputstream.adaptive.manifest_type=hls#KODIPROP:contentlookup=false#EXTVLCOPT:http-referrer=https://www.rctiplus.com/https://bintangstreaming.my.id/000/rcti.php/.m3u8?id=rcti#EXTINF:-1 tvg-id="MNCTV.id" tvg-logo="https://static.rctiplus.id/media/400/files/fta_rcti/Channel_Logo/MNCTV.png" group-title="Indonesia Channels",MNC TV (R+)#EXTVLCOPT:http-user-agent=android-R+#KODIPROP:inputstream=inputstream.adaptive#KODIPROP:inputstream.adaptive.manifest_type=hls#KODIPROP:contentlookup=false#EXTVLCOPT:http-referrer=https://www.rctiplus.com/https://bintangstreaming.my.id/000/rcti.php/.m3u8?id=mnctv#EXTINF:-1 tvg-id="GTV.id" tvg-logo="https://static.rctiplus.id/media/400/files/fta_rcti/Channel_Logo/GTV.png" group-title="Indonesia Channels",GTV (R+)#EXTVLCOPT:http-user-agent=android-R+#KODIPROP:inputstream=inputstream.adaptive#KODIPROP:inputstream.adaptive.manifest_type=hls#KODIPROP:contentlookup=false#EXTVLCOPT:http-referrer=https://www.rctiplus.com/https://bintangstreaming.my.id/000/rcti.php/.m3u8?id=gtv#EXTINF:-1 tvg-id="ANTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/IRVkD3QGRzroJ4IZzXBpS-0MRls=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/782/e1af8b.png" group-title="Indonesia Channels",ANTV HD (Vision+) #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)#EXTVLCOPT:http-referrer=https://www.visionplus.id/#KODIPROP:inputstreamaddon=inputstream.adaptive#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=10&type=drm&token=KITKATTVhttp://202.150.165.66:8088/play/807-ANTV/index.m3u8#EXTINF:-1 tvg-id="TransTV.id" tvg-logo="https://www.transtv.co.id/themes/v25.7/src/assets/logo/01-ttv.png" group-title="Indonesia Channels",TransTV (Transmedia)#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha#EXTVLCOPT:http-user-agent=VideoPlayer/4.3.0-WITH_ADShttps://live.cnnindonesia.com/transtv/smil:transtv/chunklist_w2685575259_b744100_sleng.m3u8#EXTINF:-1 tvg-id="Trans7.id" tvg-logo="https://www.transtv.co.id/themes/v25.7/src/assets/logo/01-t7.png" group-title="Indonesia Channels",Trans7 (Transmedia)#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha#EXTVLCOPT:http-user-agent=VideoPlayer/4.3.0-WITH_ADShttps://live.cnnindonesia.com/trans7/smil:trans7/chunklist_w2685575259_b744100_sleng.m3u8#EXTINF:-1 tvg-id="SCTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/kH-K9J4cROqL0TZrAyQhw7P5pBk=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/204/4e9f5c.png" group-title="Indonesia Channels",SCTV (Vision+)#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)#EXTVLCOPT:http-referrer=https://www.visionplus.id/#KODIPROP:inputstreamaddon=inputstream.adaptive#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=8&type=drm&token=KITKATTVhttps://d3b0v7fggu5zwm.cloudfront.net/out/v1/9e9aba7068ca4c7f8a73381bef5f8742/index.mpd#EXTINF:-1 tvg-id="Indosiar.id@SDr" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/0plBZ7Gso7gNBJxid9ksA8HMGxc=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/205/54ab19.png" group-title="Indonesia Channels",Indosiar (Vision+)#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)#EXTVLCOPT:http-referrer=https://www.visionplus.id/#KODIPROP:inputstreamaddon=inputstream.adaptive#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=9&type=drm&token=KITKATTVhttps://d2tjypxxy769fn.cloudfront.net/out/v1/e930be336fed49e6b26a7554e113f7a4/index.mpd#EXTINF:-1 tvg-id="MDTV.id@HD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/LCZH_yEBnTYEQzrU1pB7w7ev-Bw=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/875/325605.png" group-title="Indonesia Channels",MDTV (DensTV)#EXTVLCOPT:http-referrer=https://www.dens.tv/#EXTVLCOPT:http-origin=https://www.dens.tv#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.dens.tv/|referrer=https://www.dens.tv/|Origin=https://www.dens.tv|User-Agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206|user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206#EXTHTTP:{"Referer":"https://www.dens.tv/","referrer":"https://www.dens.tv/","Origin":"https://www.dens.tv","User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206"}https://op-flashcon-digdayahd-1.dens.tv/h/h223/02.m3u8#EXTINF:-1 tvg-id="CNNIndonesia.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://cdn.cnnindonesia.com/cnnid/images/logo_cnn_fav.png?v=10.15.2" group-title="Indonesia Channels",CNN Indonesia (ChannelFeed)#KODIPROP:inputstream=inputstream.adaptive#KODIPROP:inputstream.adaptive.manifest_type=hls#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36#EXTVLCOPT:http-referrer=https://video.detik.com/https://video.detik.com/livecnn/smil:cnntv/chunklist_w268557525_b384000_sleng.m3u8  #EXTINF:-1 tvg-id="KompasTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/Pf8yLSfHEUZeRI9tUzLDR2U8Zow=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/874/042ca3.png" group-title="Indonesia Channels",KompasTV (DensTV)#EXTVLCOPT:http-referrer=https://www.dens.tv/#EXTVLCOPT:http-origin=https://www.dens.tv#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.dens.tv/|referrer=https://www.dens.tv/|Origin=https://www.dens.tv|User-Agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206|user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206#EXTHTTP:{"Referer":"https://www.dens.tv/","referrer":"https://www.dens.tv/","Origin":"https://www.dens.tv","User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206"}https://op-flashcon-digdayahd-1.dens.tv/s/s104/index.m3u8#EXTINF:-1 tvg-id="MetroTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/u0aa_S_rQeujrp5eR6LwXdertrI=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/777/ea8483.png" group-title="Indonesia Channels",MetroTV (Vision+)#KODIPROP:inputstream.adaptive.stream_headers=origin=https://www.visionplus.id&referer=https://www.visionplus.id/&user-agent=Vision+/11.3.7 (4.2407240952) Vision+ (Linux;Android 11) ExoPlayerLib/2.19.1#EXTVLCOPT:http-referrer=https://www.visionplus.id/#KODIPROP:inputstreamaddon=inputstream.adaptive#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=14&type=drm&token=KITKATTVhttps://d2tjypxxy769fn.cloudfront.net/out/v1/fd4360b1c12c4375848c8f085fd51d41/index.mpd#EXTINF:-1 tvg-id="CNBCIndonesia.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://upload.wikimedia.org/wikipedia/id/3/35/CNBC_Indonesia.png" group-title="Indonesia Channels",CNBC Indonesia (ChannelFeed)#KODIPROP:inputstream=inputstream.adaptive#KODIPROP:inputstream.adaptive.manifest_type=hls#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36#EXTVLCOPT:http-referrer=https://video.detik.com/https://video.detik.com/livecnbc/smil:cnbctv/chunklist_w1279679883_b384000_sleng.m3u8#EXTINF:-1 tvg-id="SindoNewsTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://nabelsakha.com/wp-content/uploads/2023/10/Sindonews.png" group-title="Indonesia Channels",SindoNews (Vision+)#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)#EXTVLCOPT:http-referrer=https://www.visionplus.id/#KODIPROP:inputstreamaddon=inputstream.adaptive#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=5&type=drm&token=KITKATTVhttps://d43tg978oium5.cloudfront.net/out/v1/8c2df39f9b2842fbb997b89378841ad9/index.mpd#EXTINF:-1 tvg-id="RajawaliTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/cStgoV5oqj2Om_6NMOzK0AFY-sg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/1561/665aea.png" group-title="Indonesia Channels",RTV (Channel Feed))https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8#EXTINF:-1 tvg-id="RajawaliTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/cStgoV5oqj2Om_6NMOzK0AFY-sg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/1561/665aea.png" group-title="Indonesia Channels",RTV (DensTV)EXTVLCOPT:http-referrer=https://www.dens.tv/#EXTVLCOPT:http-origin=https://www.dens.tv#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.dens.tv/|referrer=https://www.dens.tv/|Origin=https://www.dens.tv|User-Agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206|user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206#EXTHTTP:{"Referer":"https://www.dens.tv/","referrer":"https://www.dens.tv/","Origin":"https://www.dens.tv","User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206"}https://op-flashcon-digdayahd-1.dens.tv/h/h10/index.m3u8#EXTINF:-1 tvg-logo="https://lingkar.tv/assets/img/logo-square.png",LINGKAR TVhttps://lingkartv.my.id/hls/lingkartv.m3u8#EXTINF:-1 tvg-logo="https://carubantv.id/img/logo.png",CARUBAN TVhttps://stream.carubantv.id/hls/stream.m3u8#EXTINF:-1 tvg-logo="https://brtv.co.id/wp-content/uploads/2022/12/LOGO-BRTV-ORIGINAL-768x237.png",BRTVhttps://5bf7b725107e5.streamlock.net/brtv/brtv/playlist.m3u8#EXTINF:-1 tvg-logo="https://bandungtv.tv/logo/logobandungtv.png",BANDUNG TVhttp://202.150.153.254:65500/bandungtvWEBSITE.m3u8#EXTINF:-1 tvg-logo="https://www.mncvision.id/userfiles/image/channel/channel_90.png",HANACARAKA TV#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36#EXTVLCOPT:http-referrer=https://www.visionplus.id/#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=89https://d1vckova5fh9mt.cloudfront.net/out/v1/17c724036c5f4615bd0b8093126b5c44/index.mpd#EXTINF:-1 tvg-logo="https://channeljowo.com/wp-content/uploads/2024/09/cropped-LOGO-CHANNEL-JOWO_04-1536x642.png",CHANNEL JOWO#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36#EXTVLCOPT:http-referrer=https://www.dens.tv/#EXTVLCOPT:http-origin=https://www.dens.tvhttps://op-flashcon-digdayasd-1.dens.tv/h/h215/S1/mnf.m3u8#EXTINF:-1 tvg-logo="https://channeljowo.com/wp-content/uploads/2024/09/cropped-LOGO-CHANNEL-JOWO_04-1536x642.png",CHANNEL JOWOhttp://202.150.165.66:8088/play/327-Jowo/index.m3u8#EXTINF:-1 tvg-logo="https://www.transvision.co.id/img/channel/new/GAMING%20TV.png",GAMING TVhttp://202.150.165.66:8088/play/305-GamingTV/index.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/rF34050d/fuji-tv-one.png",FUJI TV ONE##https://haru.charandom.blog/stream/jp/fuji_tv_one/stream-output.m3u8?mode=hls#EXTINF:-1 tvg-logo="https://i.postimg.cc/ydr5G30F/cnn-j-us-jp.png",CNN Jhttps://ri.shinori.my.id/pxx.php?shk_cid=cs16##https://haru.charandom.blog/stream/jp/cnnj/stream-output.m3u8?mode=hls#EXTINF:-1 tvg-logo="https://i.postimg.cc/W3C0Tzs2/ezgif-3c9fcbf07f3e8e5a.png",TVB WIRELESS NEWShttps://cdn.qd.je/163189.php?id=wxxwhttp://120.234.44.98:18180/TV00000000000000000034@HHZThttp://173.208.234.146/live/inews.m3u8#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/ad/FTV_One.png",FTV ONEhttp://125.227.210.55:3084/VideoInput/play.ts#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f4/CTi_News_logo.png",CTI TV NEWS##http://173.208.234.146/live/ctinews.m3u8https://d2jc41c1shgcol.cloudfront.net/live/CtiNEWS1/playlist.m3u8##http://iactive-clink.com:8081/live/111ztxw.m3u8http://111.0.115.129:8081/live/000ztxw.m3u8##http://safe.shanghairta.com:8081/live/000ztxw.m3u8##http://hsjky.com.cn:8081/live/999ztxw.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/fTkgMmHf/ezgif-852121a1690ad6c8.png",GTV 1http://125.227.210.55:1085/VideoInput/play.ts#EXTINF:-1 tvg-logo="https://i.postimg.cc/qMbq3VX5/ezgif-85a6a9c3bc520308.png",GTV COMPREHENSIVE#EXTINF:-1 tvg-logo="https://i.postimg.cc/MTLxGq8d/ezgif-8aa360ca9ade5a39.png",GTV DRAMA#EXTINF:-1 tvg-logo="https://i.postimg.cc/FHbGjK56/ezgif-17c92c8fc080db49.png",GTV PREMIUM#EXTINF:-1 tvg-logo="https://i.postimg.cc/mD4P7b4q/ezgif-11d334b18a4dc4a7.png",GTV VARIETY#EXTINF:-1 tvg-logo="https://i.postimg.cc/rF4rsRwX/set-tw-i-news.png",SET INEWS#EXTINF:-1 tvg-logo="https://i.postimg.cc/pL1V0qdM/warner-tv-us-png-(132-99).png",WARNER BROS.TV TAIWAN##https://play-drm.aliiptv.com/live/warnertv.m3u8?verify=1790056290-4w7vbzmuwXKZyBBGiSOJERiRrXvWX5rqEGe_H61vbuQ#EXTINF:-1 tvg-logo="https://i.postimg.cc/dVZcR2gn/ezgif-74f7f93d973f4ded.png",HUNAN TV 4K DIRECThttp://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-kaku-cn.png",BRTV KAKU##http://38.75.136.137:98/gslb/dsdqpub/btvkk.m3u8?auth=testpubhttp://107.150.60.122/live/btvkk.m3u8##http://114.242.62.109:888/hls/26/index.m3u8##http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btvkk#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-literature-cn.png",BRTV LITERATURE##http://114.242.62.109:888/hls/18/index.m3u8http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv2#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-documentary-science-and-education-cn.png",BRTV DOCUMENTARY SCIENCE & EDUCATION##http://38.75.136.137:98/gslb/dsdqpub/btv3.m3u8?auth=testpubhttp://107.150.60.122/live/btv3.m3u8 ##http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv3##http://114.242.62.109:888/hls/19/index.m3u8#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-films-cn.png",BRTV FILMS##http://114.242.62.109:888/hls/20/index.m3u8http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv4#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-finance-cn.png",BRTV FINANCE##http://114.242.62.109:888/hls/21/index.m3u8http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv5#EXTINF:-1 tvg-logo="https://i.postimg.cc/RZRnzGWy/ezgif-6d3cc6fb631947ec.png",BRTV SPORTS LEISUREhttp://114.242.62.109:888/hls/22/index.m3u8##http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv6#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-ilife-cn.png",BRTV ILIFE##http://114.242.62.109:888/hls/23/index.m3u8http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv7#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-news-cn.png",BRTV NEWShttp://114.242.62.109:888/hls/25/index.m3u8#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-international-cn.png",BRTV INTERNATIONALhttp://114.242.62.109:888/hls/27/index.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/4xCbwjSJ/ezgif-2-67ea0b71d7.png",HGTV#EXTINF:-1 tvg-logo="https://i.postimg.cc/pL1V0qdM/warner-tv-us-png-(132-99).png",WARNER BROS.TV http://202.150.165.66:8088/play/302-WarnerTV/index.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/9X8cD91p/ezgif-35efbef854ce0567.png",OUTDOOR#EXTVLCOPT:http-referrer=https://www.outdoorchannel.com/https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/gg/gtv-ph.png",GTVhttp://136.239.159.18:6610/001/2/ch00000090990000001143/manifest.mpd?AuthInfo=v87HD9rEhwHiAdYyrP20Tg5pgSMSITY%2FHYvvCWJRp%2BrwAtJC%2BsmBQ5ARU076BdkhytokK1MIobcue1ImXa0ZEA%3D%3D&version=v1.0&BreakPoint=0&virtualDomain=001.live_hls.zte.com&programid=ch00000000000000001313&contentid=ch00000000000000001313&videoid=ch00000090990000001143&recommendtype=0&userid=1590268675436&boid=001&stbid=02%3A00%3A00%3A00%3A00%3A00&terminalflag=1&profilecode=&usersessionid=AAIUZ2MAG7XXXX&NeedJITP=1&JITPMediaType=DASH&JITPDRMType=NO#EXTINF:-1 tvg-logo="https://thaitvstream.com/streaming/thainews/thainews.png",THAI NEWShttps://live.thaitvstream.com/play/thainews/index.m3u8#EXTINF:-1 tvg-logo="https://i.imgur.com/ETgVyTy.png",GOOD IDEA TV##http://stream1.ai-net.net:1935/gtv1/_definst_/smil:gtv.smil/playlist.m3u8#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/dd/dong-nai-tv-1-vn.png",DN1 NRTVhttps://dethich.pw/dongnai1/index.m3u8##http://118.107.85.4:1935/live/smil:DNTV1.smil/playlist.m3u8#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/dd/dong-nai-tv-2-vn.png",DN2 NRTVhttps://dethich.pw/dongnai2/index.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/ZnnZ5T78/ezgif-2f736854ecac5d92.png",DN3 NRTVhttps://dethich.pw/dongnai3/index.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/0b/SCTV1_logo.png/revision/latest?cb=20191009032102",SCTV 1##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv1/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/e/e2/SCTV2-0.png/revision/latest?cb=20180627082740",SCTV 2##EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36##https://freem3u.xyz/api/live/play.m3u8?vid=201https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv2/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/4/4a/SCTV3.png/revision/latest?cb=20210819101244&path-prefix=vi",SCTV 3https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv3/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/1/13/SCTV4_logo_19-01-2023.png/revision/latest?cb=20230323071855&path-prefix=vi",SCTV 4https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv4/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/9/9e/SCTV5_2017.png/revision/latest?cb=20220223141555&path-prefix=vi",SCTV 5##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv5/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/4b/SCTV6.png/revision/latest?cb=20210220103413",SCTV 6https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv6/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/3/36/SCTV7_logo.png/revision/latest?cb=20220223142137&path-prefix=vi",SCTV 7https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv7/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/05/SCTV8.png/revision/latest?cb=20220312144352",SCTV 8https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv8/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/f/f3/SCTV9.png/revision/latest/scale-to-width-down/200?cb=20210821040105&path-prefix=vi",SCTV 9https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv9/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/f/fb/SCTV10_logo.png/revision/latest/scale-to-width-down/1570?cb=20220223142144&path-prefix=vi",SCTV 10##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv10/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/d/d7/SCTV11_logo_2022.png/revision/latest?cb=20220428035154&path-prefix=vi",SCTV 11https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv11/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/70/SCTV12_logo.png/revision/latest/scale-to-width-down/220?cb=20201011030148",SCTV 12https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv12/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/4/45/SCTV13_logo.png/revision/latest?cb=20211211011126&path-prefix=vi",SCTV 13https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv13/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/0/09/SCTV14_logo_12-02-2026.png/revision/latest?cb=20260301113219&path-prefix=vi",SCTV 14https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv14/master.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/fyTP4cQX/ezgif-6846ab5c81413596.png",SCTV 15 SPORT 2##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv15/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/a/aa/SCTV16.png/revision/latest?cb=20210820043927&path-prefix=vi",SCTV 16https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv16/master.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/yN3BtzXw/ezgif-6c7888a817c97799.png",SCTV 17 SPORT##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv17/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/c/ca/SCTV18.png/revision/latest?cb=20210820120952&path-prefix=vi",SCTV 18https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv18/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/e/ef/SCTV19.png/revision/latest?cb=20240131141543&path-prefix=vi",SCTV 19https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv19/master.m3u8#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/b/b1/SCTV20.png/revision/latest/scale-to-width-down/1200?cb=20210821042852&path-prefix=vi",SCTV 20https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv20/master.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/sgwvsyWv/ezgif-635a03455d2a6ae5.png",SCTV 22 SPORT 1##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv22/master.m3u8#EXTINF:-1 tvg-logo="https://i.imgur.com/SRQ478q.png",MONGOLIAN NEWS CHANNELhttps://cdn4.skygo.mn/live/disk1/MNCTV/HLSv3-FTA/MNCTV.m3u8#EXTINF:-1 tvg-logo="https://i.imgur.com/BCc3llv.png",GANDAN TVhttps://cdn4.skygo.mn/live/disk1/GTV/HLSv3-FTA/GTV.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/2SZct6qk/ezgif-5e1a7c657c87b2f1.png",CNBC#EXTINF:-1 tvg-logo="https://i.postimg.cc/2SZct6qk/ezgif-5e1a7c657c87b2f1.png",CNBC ASIAhttp://202.150.165.66:8088/play/609-CNBCAsia/index.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/2SZct6qk/ezgif-5e1a7c657c87b2f1.png",CNBC EUROPEhttps://amg01079-nbcuuk-amg01079c2-samsung-gb-1258.playouts.now.amagi.tv/playlist.m3u8#EXTINF:-1 tvg-logo="https://i.postimg.cc/65R56zH8/cnbc-e-us-tr.png",CNBC-Ehttps://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/ss/sportv.png",SPORTV#KODIPROP:inputstream.adaptive.manifest_type=mpd#KODIPROP:inputstream.adaptive.license_type=clearkey#KODIPROP:inputstream.adaptive.license_key=51c0ef23b17297e5c01cd7f36dd0a6ce:8823f713ba6fdb9bbe0a2ad82d309a4bhttps://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1/3aa321e477504937a439b602e078eb18/cenc.mpd#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/ss/sportv-2.png",SPORTV 2#KODIPROP:inputstream.adaptive.license_type=clearkey#KODIPROP:inputstream.adaptive.license_key=9009b7189e3e68cc09d17811f2beb55a:dd3f96a94c909da48ff40c92aabf8cf3#EXTVLCOPT:http-user-agent=Mozilla/5.0https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/4yiko4it8k/out/v1/b77dd424c745443aba2f3f88d418f797/cenc-sd.mpd#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/ss/sportv-3.png",SPORTV 3#KODIPROP:inputstream.adaptive.license_type=clearkey#KODIPROP:inputstream.adaptive.license_key=902e5ec0e3d05e665daa32fc23f4f59e:7b2322a273843921a43e2c61dac7cae3#EXTVLCOPT:http-user-agent=Mozilla/5.0https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/out/v1/add7499679b0422cb6791f7701f95ecc/cenc.mpd?amznDtid=AOAGZA014O5RE&encoding=segmentBase===========================================================================================================================
+#EXTINF
+#EXTINF:-1 tvg-logo="https://i.ibb.co.com/7t2mbspy/TVONE.png" group-title="INDONESIA 🇮🇩",TvOne
+#EXTVLCOPT:http-referrer=http://www.dens.tv/
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
+http://op-flashcon-digdayahd-1.dens.tv/h/h40/index.m3u8
+#EXTINF:-1 tvg-id="RCTI.id" tvg-logo="https://static.rctiplus.id/media/400/files/fta_rcti/Channel_Logo/RCTI.png" group-title="Indonesia Channels",RCTI (V+)
+#EXTVLCOPT:http-user-agent=android-R+
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:contentlookup=false
+#EXTVLCOPT:http-referrer=https://www.rctiplus.com/
+https://bintangstreaming.my.id/000/rcti.php/.m3u8?id=rcti
+#EXTINF:-1 tvg-id="MNCTV.id" tvg-logo="https://static.rctiplus.id/media/400/files/fta_rcti/Channel_Logo/MNCTV.png" group-title="Indonesia Channels",MNC TV (R+)
+#EXTVLCOPT:http-user-agent=android-R+
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:contentlookup=false
+#EXTVLCOPT:http-referrer=https://www.rctiplus.com/
+https://bintangstreaming.my.id/000/rcti.php/.m3u8?id=mnctv
+#EXTINF:-1 tvg-id="GTV.id" tvg-logo="https://static.rctiplus.id/media/400/files/fta_rcti/Channel_Logo/GTV.png" group-title="Indonesia Channels",GTV (R+)
+#EXTVLCOPT:http-user-agent=android-R+
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#KODIPROP:contentlookup=false
+#EXTVLCOPT:http-referrer=https://www.rctiplus.com/
+https://bintangstreaming.my.id/000/rcti.php/.m3u8?id=gtv
+#EXTINF:-1 tvg-id="ANTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/IRVkD3QGRzroJ4IZzXBpS-0MRls=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/782/e1af8b.png" group-title="Indonesia Channels",ANTV HD (Vision+) 
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=10&type=drm&token=KITKATTV
+http://202.150.165.66:8088/play/807-ANTV/index.m3u8
+#EXTINF:-1 tvg-id="TransTV.id" tvg-logo="https://www.transtv.co.id/themes/v25.7/src/assets/logo/01-ttv.png" group-title="Indonesia Channels",TransTV (Transmedia)
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#EXTVLCOPT:http-user-agent=VideoPlayer/4.3.0-WITH_ADS
+https://live.cnnindonesia.com/transtv/smil:transtv/chunklist_w2685575259_b744100_sleng.m3u8
+#EXTINF:-1 tvg-id="Trans7.id" tvg-logo="https://www.transtv.co.id/themes/v25.7/src/assets/logo/01-t7.png" group-title="Indonesia Channels",Trans7 (Transmedia)
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#EXTVLCOPT:http-user-agent=VideoPlayer/4.3.0-WITH_ADS
+https://live.cnnindonesia.com/trans7/smil:trans7/chunklist_w2685575259_b744100_sleng.m3u8
+#EXTINF:-1 tvg-id="SCTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/kH-K9J4cROqL0TZrAyQhw7P5pBk=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/204/4e9f5c.png" group-title="Indonesia Channels",SCTV (Vision+)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=8&type=drm&token=KITKATTV
+https://d3b0v7fggu5zwm.cloudfront.net/out/v1/9e9aba7068ca4c7f8a73381bef5f8742/index.mpd
+#EXTINF:-1 tvg-id="Indosiar.id@SDr" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/0plBZ7Gso7gNBJxid9ksA8HMGxc=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/205/54ab19.png" group-title="Indonesia Channels",Indosiar (Vision+)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=9&type=drm&token=KITKATTV
+https://d2tjypxxy769fn.cloudfront.net/out/v1/e930be336fed49e6b26a7554e113f7a4/index.mpd
+#EXTINF:-1 tvg-id="MDTV.id@HD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/LCZH_yEBnTYEQzrU1pB7w7ev-Bw=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/875/325605.png" group-title="Indonesia Channels",MDTV (DensTV)
+#EXTVLCOPT:http-referrer=https://www.dens.tv/
+#EXTVLCOPT:http-origin=https://www.dens.tv
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.dens.tv/|referrer=https://www.dens.tv/|Origin=https://www.dens.tv|User-Agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206|user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206
+#EXTHTTP:{"Referer":"https://www.dens.tv/","referrer":"https://www.dens.tv/","Origin":"https://www.dens.tv","User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206"}
+https://op-flashcon-digdayahd-1.dens.tv/h/h223/02.m3u8
+#EXTINF:-1 tvg-id="CNNIndonesia.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://cdn.cnnindonesia.com/cnnid/images/logo_cnn_fav.png?v=10.15.2" group-title="Indonesia Channels",CNN Indonesia (ChannelFeed)
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://video.detik.com/
+https://video.detik.com/livecnn/smil:cnntv/chunklist_w268557525_b384000_sleng.m3u8
+#EXTINF:-1 tvg-id="KompasTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/Pf8yLSfHEUZeRI9tUzLDR2U8Zow=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/874/042ca3.png" group-title="Indonesia Channels",KompasTV (DensTV)
+#EXTVLCOPT:http-referrer=https://www.dens.tv/
+#EXTVLCOPT:http-origin=https://www.dens.tv
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.dens.tv/|referrer=https://www.dens.tv/|Origin=https://www.dens.tv|User-Agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206|user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206
+#EXTHTTP:{"Referer":"https://www.dens.tv/","referrer":"https://www.dens.tv/","Origin":"https://www.dens.tv","User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206"}
+https://op-flashcon-digdayahd-1.dens.tv/s/s104/index.m3u8
+#EXTINF:-1 tvg-id="MetroTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/u0aa_S_rQeujrp5eR6LwXdertrI=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/777/ea8483.png" group-title="Indonesia Channels",MetroTV (Vision+)
+#KODIPROP:inputstream.adaptive.stream_headers=origin=https://www.visionplus.id&referer=https://www.visionplus.id/&user-agent=Vision+/11.3.7 (4.2407240952) Vision+ (Linux;Android 11) ExoPlayerLib/2.19.1
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=14&type=drm&token=KITKATTV
+https://d2tjypxxy769fn.cloudfront.net/out/v1/fd4360b1c12c4375848c8f085fd51d41/index.mpd
+#EXTINF:-1 tvg-id="CNBCIndonesia.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://upload.wikimedia.org/wikipedia/id/3/35/CNBC_Indonesia.png" group-title="Indonesia Channels",CNBC Indonesia (ChannelFeed)
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=hls
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://video.detik.com/
+https://video.detik.com/livecnbc/smil:cnbctv/chunklist_w1279679883_b384000_sleng.m3u8
+#EXTINF:-1 tvg-id="SindoNewsTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://nabelsakha.com/wp-content/uploads/2023/10/Sindonews.png" group-title="Indonesia Channels",SindoNews (Vision+)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=5&type=drm&token=KITKATTV
+https://d43tg978oium5.cloudfront.net/out/v1/8c2df39f9b2842fbb997b89378841ad9/index.mpd
+#EXTINF:-1 tvg-id="RajawaliTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/cStgoV5oqj2Om_6NMOzK0AFY-sg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/1561/665aea.png" group-title="Indonesia Channels",RTV (Channel Feed))
+https://rtvstream.rtv.co.id:4555/hls/rtv.m3u8
+#EXTINF:-1 tvg-id="RajawaliTV.id@SD" tvg-url="https://raw.githubusercontent.com/apistech/project/refs/heads/main/epgs/guide.xml" tvg-logo="https://thumbor.prod.vidiocdn.com/cStgoV5oqj2Om_6NMOzK0AFY-sg=/230x230/filters:quality(70)/vidio-web-prod-livestreaming/uploads/livestreaming/square_image/1561/665aea.png" group-title="Indonesia Channels",RTV (DensTV)
+EXTVLCOPT:http-referrer=https://www.dens.tv/
+#EXTVLCOPT:http-origin=https://www.dens.tv
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206
+#KODIPROP:inputstream.adaptive.stream_headers=Referer=https://www.dens.tv/|referrer=https://www.dens.tv/|Origin=https://www.dens.tv|User-Agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206|user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206
+#EXTHTTP:{"Referer":"https://www.dens.tv/","referrer":"https://www.dens.tv/","Origin":"https://www.dens.tv","User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206","user-agent":"Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0/v2206"}
+https://op-flashcon-digdayahd-1.dens.tv/h/h10/index.m3u8
+#EXTINF:-1 tvg-logo="https://lingkar.tv/assets/img/logo-square.png",LINGKAR TV
+https://lingkartv.my.id/hls/lingkartv.m3u8
+#EXTINF:-1 tvg-logo="https://carubantv.id/img/logo.png",CARUBAN TV
+https://stream.carubantv.id/hls/stream.m3u8
+#EXTINF:-1 tvg-logo="https://brtv.co.id/wp-content/uploads/2022/12/LOGO-BRTV-ORIGINAL-768x237.png",BRTV
+https://5bf7b725107e5.streamlock.net/brtv/brtv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://bandungtv.tv/logo/logobandungtv.png",BANDUNG TV
+http://202.150.153.254:65500/bandungtvWEBSITE.m3u8
+#EXTINF:-1 tvg-logo="https://www.mncvision.id/userfiles/image/channel/channel_90.png",HANACARAKA TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.visionplus.id/
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://vision.mikrofast.web.id/license?id=89
+https://d1vckova5fh9mt.cloudfront.net/out/v1/17c724036c5f4615bd0b8093126b5c44/index.mpd
+#EXTINF:-1 tvg-logo="https://channeljowo.com/wp-content/uploads/2024/09/cropped-LOGO-CHANNEL-JOWO_04-1536x642.png",CHANNEL JOWO
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
+#EXTVLCOPT:http-referrer=https://www.dens.tv/
+#EXTVLCOPT:http-origin=https://www.dens.tv
+https://op-flashcon-digdayasd-1.dens.tv/h/h215/S1/mnf.m3u8
+#EXTINF:-1 tvg-logo="https://channeljowo.com/wp-content/uploads/2024/09/cropped-LOGO-CHANNEL-JOWO_04-1536x642.png",CHANNEL JOWO
+http://202.150.165.66:8088/play/327-Jowo/index.m3u8
+#EXTINF:-1 tvg-logo="https://www.transvision.co.id/img/channel/new/GAMING%20TV.png",GAMING TV
+http://202.150.165.66:8088/play/305-GamingTV/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/ydr5G30F/cnn-j-us-jp.png",CNN J
+https://ri.shinori.my.id/pxx.php?shk_cid=cs16
+##https://haru.charandom.blog/stream/jp/cnnj/stream-output.m3u8?mode=hls
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/W3C0Tzs2/ezgif-3c9fcbf07f3e8e5a.png",TVB WIRELESS NEWS
+https://cdn.qd.je/163189.php?id=wxxw
+http://120.234.44.98:18180/TV00000000000000000034@HHZT
+http://173.208.234.146/live/inews.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f4/CTi_News_logo.png",CTI TV NEWS
+##http://173.208.234.146/live/ctinews.m3u8
+https://d2jc41c1shgcol.cloudfront.net/live/CtiNEWS1/playlist.m3u8
+##http://iactive-clink.com:8081/live/111ztxw.m3u8
+http://111.0.115.129:8081/live/000ztxw.m3u8
+##http://safe.shanghairta.com:8081/live/000ztxw.m3u8
+##http://hsjky.com.cn:8081/live/999ztxw.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/fTkgMmHf/ezgif-852121a1690ad6c8.png",GTV 1
+http://125.227.210.55:1085/VideoInput/play.ts
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/qMbq3VX5/ezgif-85a6a9c3bc520308.png",GTV COMPREHENSIVE
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/MTLxGq8d/ezgif-8aa360ca9ade5a39.png",GTV DRAMA
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/FHbGjK56/ezgif-17c92c8fc080db49.png",GTV PREMIUM
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/mD4P7b4q/ezgif-11d334b18a4dc4a7.png",GTV VARIETY
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/rF4rsRwX/set-tw-i-news.png",SET INEWS
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/pL1V0qdM/warner-tv-us-png-(132-99).png",WARNER BROS.TV TAIWAN
+##https://play-drm.aliiptv.com/live/warnertv.m3u8?verify=1790056290-4w7vbzmuwXKZyBBGiSOJERiRrXvWX5rqEGe_H61vbuQ
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/dVZcR2gn/ezgif-74f7f93d973f4ded.png",HUNAN TV 4K DIRECT
+http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-kaku-cn.png",BRTV KAKU
+##http://38.75.136.137:98/gslb/dsdqpub/btvkk.m3u8?auth=testpub
+http://107.150.60.122/live/btvkk.m3u8
+##http://114.242.62.109:888/hls/26/index.m3u8
+##http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btvkk
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-literature-cn.png",BRTV LITERATURE
+##http://114.242.62.109:888/hls/18/index.m3u8
+http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv2
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-documentary-science-and-education-cn.png",BRTV DOCUMENTARY SCIENCE & EDUCATION
+##http://38.75.136.137:98/gslb/dsdqpub/btv3.m3u8?auth=testpub
+http://107.150.60.122/live/btv3.m3u8 
+##http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv3
+##http://114.242.62.109:888/hls/19/index.m3u8
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-films-cn.png",BRTV FILMS
+##http://114.242.62.109:888/hls/20/index.m3u8
+http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv4
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-finance-cn.png",BRTV FINANCE
+##http://114.242.62.109:888/hls/21/index.m3u8
+http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv5
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/RZRnzGWy/ezgif-6d3cc6fb631947ec.png",BRTV SPORTS LEISURE
+http://114.242.62.109:888/hls/22/index.m3u8
+##http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv6
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-ilife-cn.png",BRTV ILIFE
+##http://114.242.62.109:888/hls/23/index.m3u8
+http://63.141.230.178:82/gslb/zbdq5.m3u8?id=btv7
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-news-cn.png",BRTV NEWS
+http://114.242.62.109:888/hls/25/index.m3u8
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/bb/brtv-international-cn.png",BRTV INTERNATIONAL
+http://114.242.62.109:888/hls/27/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/4xCbwjSJ/ezgif-2-67ea0b71d7.png",HGTV
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/hPSH4VYx/ezgif-6cd32f09eb2a7a4f.png",CNN
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/pL1V0qdM/warner-tv-us-png-(132-99).png",WARNER BROS.TV 
+http://202.150.165.66:8088/play/302-WarnerTV/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/9X8cD91p/ezgif-35efbef854ce0567.png",OUTDOOR
+#EXTVLCOPT:http-referrer=https://www.outdoorchannel.com/
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/gg/gtv-ph.png",GTV
+http://136.239.159.18:6610/001/2/ch00000090990000001143/manifest.mpd?AuthInfo=v87HD9rEhwHiAdYyrP20Tg5pgSMSITY%2FHYvvCWJRp%2BrwAtJC%2BsmBQ5ARU076BdkhytokK1MIobcue1ImXa0ZEA%3D%3D&version=v1.0&BreakPoint=0&virtualDomain=001.live_hls.zte.com&programid=ch00000000000000001313&contentid=ch00000000000000001313&videoid=ch00000090990000001143&recommendtype=0&userid=1590268675436&boid=001&stbid=02%3A00%3A00%3A00%3A00%3A00&terminalflag=1&profilecode=&usersessionid=AAIUZ2MAG7XXXX&NeedJITP=1&JITPMediaType=DASH&JITPDRMType=NO
+#EXTINF:-1 tvg-logo="https://thaitvstream.com/streaming/thainews/thainews.png",THAI NEWS
+https://live.thaitvstream.com/play/thainews/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/ETgVyTy.png",GOOD IDEA TV
+##http://stream1.ai-net.net:1935/gtv1/_definst_/smil:gtv.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/dd/dong-nai-tv-1-vn.png",DN1 NRTV
+https://dethich.pw/dongnai1/index.m3u8
+##http://118.107.85.4:1935/live/smil:DNTV1.smil/playlist.m3u8
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/dd/dong-nai-tv-2-vn.png",DN2 NRTV
+https://dethich.pw/dongnai2/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/ZnnZ5T78/ezgif-2f736854ecac5d92.png",DN3 NRTV
+https://dethich.pw/dongnai3/index.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/0b/SCTV1_logo.png/revision/latest?cb=20191009032102",SCTV 1
+##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv1/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/e/e2/SCTV2-0.png/revision/latest?cb=20180627082740",SCTV 2
+##EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36
+##https://freem3u.xyz/api/live/play.m3u8?vid=201
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv2/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/4/4a/SCTV3.png/revision/latest?cb=20210819101244&path-prefix=vi",SCTV 3
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv3/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/1/13/SCTV4_logo_19-01-2023.png/revision/latest?cb=20230323071855&path-prefix=vi",SCTV 4
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv4/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/9/9e/SCTV5_2017.png/revision/latest?cb=20220223141555&path-prefix=vi",SCTV 5
+##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv5/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/4/4b/SCTV6.png/revision/latest?cb=20210220103413",SCTV 6
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv6/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/3/36/SCTV7_logo.png/revision/latest?cb=20220223142137&path-prefix=vi",SCTV 7
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv7/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/05/SCTV8.png/revision/latest?cb=20220312144352",SCTV 8
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv8/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/f/f3/SCTV9.png/revision/latest/scale-to-width-down/200?cb=20210821040105&path-prefix=vi",SCTV 9
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv9/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/f/fb/SCTV10_logo.png/revision/latest/scale-to-width-down/1570?cb=20220223142144&path-prefix=vi",SCTV 10
+##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv10/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/d/d7/SCTV11_logo_2022.png/revision/latest?cb=20220428035154&path-prefix=vi",SCTV 11
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv11/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logopedia/images/7/70/SCTV12_logo.png/revision/latest/scale-to-width-down/220?cb=20201011030148",SCTV 12
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv12/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/4/45/SCTV13_logo.png/revision/latest?cb=20211211011126&path-prefix=vi",SCTV 13
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv13/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/0/09/SCTV14_logo_12-02-2026.png/revision/latest?cb=20260301113219&path-prefix=vi",SCTV 14
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv14/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/fyTP4cQX/ezgif-6846ab5c81413596.png",SCTV 15 SPORT 2
+##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv15/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/a/aa/SCTV16.png/revision/latest?cb=20210820043927&path-prefix=vi",SCTV 16
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv16/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/yN3BtzXw/ezgif-6c7888a817c97799.png",SCTV 17 SPORT
+##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv17/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/c/ca/SCTV18.png/revision/latest?cb=20210820120952&path-prefix=vi",SCTV 18
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv18/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/e/ef/SCTV19.png/revision/latest?cb=20240131141543&path-prefix=vi",SCTV 19
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv19/master.m3u8
+#EXTINF:-1 tvg-logo="https://static.wikia.nocookie.net/logos/images/b/b1/SCTV20.png/revision/latest/scale-to-width-down/1200?cb=20210821042852&path-prefix=vi",SCTV 20
+https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv20/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/sgwvsyWv/ezgif-635a03455d2a6ae5.png",SCTV 22 SPORT 1
+##https://vtvgolive-sctvdrm.vtvdigital.vn/manifest/sctv22/master.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/SRQ478q.png",MONGOLIAN NEWS CHANNEL
+https://cdn4.skygo.mn/live/disk1/MNCTV/HLSv3-FTA/MNCTV.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/BCc3llv.png",GANDAN TV
+https://cdn4.skygo.mn/live/disk1/GTV/HLSv3-FTA/GTV.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/Qt4ZSKfj/cnn-logo-png-seeklogo-32699.png",CNN
+http://202.150.165.66:8088/play/600-CNNInter/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/2SZct6qk/ezgif-5e1a7c657c87b2f1.png",CNBC
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/2SZct6qk/ezgif-5e1a7c657c87b2f1.png",CNBC ASIA
+http://202.150.165.66:8088/play/609-CNBCAsia/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/2SZct6qk/ezgif-5e1a7c657c87b2f1.png",CNBC EUROPE
+https://amg01079-nbcuuk-amg01079c2-samsung-gb-1258.playouts.now.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.postimg.cc/65R56zH8/cnbc-e-us-tr.png",CNBC-E
+https://hnpsechtsc.turknet.ercdn.net/xpnvudnlsv/cnbc-e/cnbc-e.m3u8
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/ss/sportv.png",SPORTV
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=51c0ef23b17297e5c01cd7f36dd0a6ce:8823f713ba6fdb9bbe0a2ad82d309a4b
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/w8kwdfmlgs/out/v1/3aa321e477504937a439b602e078eb18/cenc.mpd
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/ss/sportv-2.png",SPORTV 2
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=9009b7189e3e68cc09d17811f2beb55a:dd3f96a94c909da48ff40c92aabf8cf3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/4yiko4it8k/out/v1/b77dd424c745443aba2f3f88d418f797/cenc-sd.mpd
+#EXTINF:-1 tvg-logo="http://www.lyngsat.com/logo/tv/ss/sportv-3.png",SPORTV 3
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=902e5ec0e3d05e665daa32fc23f4f59e:7b2322a273843921a43e2c61dac7cae3
+#EXTVLCOPT:http-user-agent=Mozilla/5.0
+https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/out/v1/add7499679b0422cb6791f7701f95ecc/cenc.mpd?amznDtid=AOAGZA014O5RE&encoding=segmentBase
+
+===========================================================================================================================
