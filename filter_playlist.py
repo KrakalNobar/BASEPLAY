@@ -1,11 +1,11 @@
 import urllib.request
 
-# URL mentah (raw) dari file BASED di repository Anda
 BASE_URL = "https://raw.githubusercontent.com/KrakalNobar/BASEPLAY/main/BASED"
 OUTPUT_FILE = "shiegiet"
 
-# Daftar keyword kanal yang ingin diambil (TVONE dan GLOBAL/GTV)
-ALLOWED_CHANNELS = ["tvone", "gtv"] 
+# Daftar nama kanal yang dicocokkan secara spesifik (menggunakan tvg-id atau nama pasti di baris EXTINF)
+# Kita pastikan mencocokkan id atau nama yang spesifik untuk TVOne dan GTV/Global
+EXACT_MATCHES = ["tvone", "gtv.id", "gtv"]
 
 def filter_m3u():
     print("Mengambil playlist dari file BASED...")
@@ -28,22 +28,32 @@ def filter_m3u():
         if line.startswith("#EXTINF"):
             block = [line]
             i += 1
-            # Mengumpulkan baris atribut pendukung dan URL stream di bawahnya
             while i < len(lines) and not lines[i].startswith("#EXTINF") and not lines[i].startswith("#EXTM3U"):
                 block.append(lines[i])
                 i += 1
             
-            # Cek apakah kanal ini mengandung kata kunci tvone atau gtv (GLOBAL)
             block_text = " ".join(block).lower()
-            if any(allowed in block_text for allowed in ALLOWED_CHANNELS):
+            
+            # Filter ketat: Cek apakah baris EXTINF mengandung kata kunci secara spesifik
+            # Contoh untuk tvone: pastikan ada 'tvone'
+            # Contoh untuk global/gtv: pastikan ada 'gtv' tapi bukan bagian dari kata lain yang tidak relevan
+            is_valid = False
+            for match in EXACT_MATCHES:
+                if match == "tvone" and 'tvone' in block_text:
+                    is_valid = True
+                elif match in ["gtv", "gtv.id"] and ('gtv' in block_text or 'global' in block_text):
+                    # Pastikan tidak meloloskan 'gaming tv' atau yang mengandung kata 'tv' sembarangan
+                    if 'gaming' not in block_text:
+                        is_valid = True
+
+            if is_valid:
                 new_lines.extend(block)
         else:
             i += 1
 
-    # Simpan hasil filter ke dalam file/folder shiegiet
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(new_lines) + "\n")
-    print(f"Berhasil memfilter dan memperbarui {OUTPUT_FILE}")
+    print(f"Berhasil memperbarui {OUTPUT_FILE} dengan filter ketat.")
 
 if __name__ == "__main__":
     filter_m3u()
