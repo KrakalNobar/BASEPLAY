@@ -3,9 +3,8 @@ import urllib.request
 BASE_URL = "https://raw.githubusercontent.com/KrakalNobar/BASEPLAY/main/BASED"
 OUTPUT_FILE = "shiegiet"
 
-# Daftar nama kanal yang dicocokkan secara spesifik (menggunakan tvg-id atau nama pasti di baris EXTINF)
-# Kita pastikan mencocokkan id atau nama yang spesifik untuk TVOne dan GTV/Global
-EXACT_MATCHES = ["tvone", "gtv.id", "gtv"]
+# Daftar target id atau nama unik yang persis ingin diambil
+EXACT_TARGETS = ['tvg-id="tvone.id@sd"', 'tvg-id="gtv.id@sd"']
 
 def filter_m3u():
     print("Mengambil playlist dari file BASED...")
@@ -34,26 +33,15 @@ def filter_m3u():
             
             block_text = " ".join(block).lower()
             
-            # Filter ketat: Cek apakah baris EXTINF mengandung kata kunci secara spesifik
-            # Contoh untuk tvone: pastikan ada 'tvone'
-            # Contoh untuk global/gtv: pastikan ada 'gtv' tapi bukan bagian dari kata lain yang tidak relevan
-            is_valid = False
-            for match in EXACT_MATCHES:
-                if match == "tvone" and 'tvone' in block_text:
-                    is_valid = True
-                elif match in ["gtv", "gtv.id"] and ('gtv' in block_text or 'global' in block_text):
-                    # Pastikan tidak meloloskan 'gaming tv' atau yang mengandung kata 'tv' sembarangan
-                    if 'gaming' not in block_text:
-                        is_valid = True
-
-            if is_valid:
+            # Hanya ambil jika baris EXTINF persis memiliki tvg-id target utama
+            if any(target in block_text for target in EXACT_TARGETS):
                 new_lines.extend(block)
         else:
             i += 1
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(new_lines) + "\n")
-    print(f"Berhasil memperbarui {OUTPUT_FILE} dengan filter ketat.")
+    print(f"Berhasil memperbarui {OUTPUT_FILE} dengan filter presisi.")
 
 if __name__ == "__main__":
     filter_m3u()
