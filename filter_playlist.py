@@ -3,65 +3,49 @@ import urllib.request
 BASE_URL = "https://raw.githubusercontent.com/KrakalNobar/BASEPLAY/main/BASED"
 OUTPUT_FILE = "shiegiet"
 
-# Daftar target channel dengan nama resmi yang biasa muncul di judul
-# Format: (Nomor Urut, Nama Channel Utama, [Daftar kata kunci judul yang valid])
-EXACT_CHANNELS = [
-    ("1. TVONE", ["tvone", "tv one"]),
-    ("2. RCTI", ["rcti"]),
-    ("3. MNCTV", ["mnctv", "mnc tv"]),
-    ("4. GTV", ["gtv", "global tv"]),
-    ("5. ANTV", ["antv"]),
-    ("6. TRANSTV", ["transtv", "trans tv"]),
-    ("7. TRANS7", ["trans7", "trans 7"]),
-    ("8. INDOSIAR", ["indosiar"]),
-    ("9. SCTV", ["sctv"]),
-    ("10. METRO", ["metrotv", "metro tv"]),
-    ("11. KOMPASTV", ["kompastv", "kompas tv"]),
-    ("12. CNN", ["cnn indonesia", "cnn j"]),
-    ("13. INEWS", ["inews", "i-news"]),
-    ("14. RTV", ["rtv"]),
-    ("15. MDTV", ["mdtv"]),
-    ("16. JOWO", ["jowo"]),
-    ("17. HANACARAKA", ["hanacaraka"]),
-    ("18. CNBC", ["cnbc indonesia", "cnbc"]),
-    ("19. SINDONEWS", ["sindonews"]),
-    ("20. MOJI", ["moji"]),
-    ("21. IDX", ["idx channel", "idx"]),
-    ("22. TVRI", ["tvri nasional", "tvri"]),
-    ("23. JAK TV", ["jaktv", "jak tv"]),
-    ("24. BTV", ["btv"]),
-    ("25. DAAI", ["daai tv", "daai"]),
-    ("26. INDONESIANA", ["indonesiana"]),
-    ("27. CARUBAN", ["caruban"]),
-    ("28. BANTEN", ["banten tv", "banten"]),
-    ("29. SPORTSTARS", ["sportstars 1", "sportstars"]),
-    ("30. SPORTSTARS 2", ["sportstars 2", "sportstars2"]),
-    ("31. SPORTSTARS 3", ["sportstars 3", "sportstars3"]),
-    ("32. SPORTSTARS 4", ["sportstars 4", "sportstars4"]),
-    ("33. SOCCER", ["soccer channel", "soccer"]),
-    ("34. SPOTV", ["spotv hd", "spotv"]),
-    ("35. SPOTV2", ["spotv 2", "spotv2"]),
-    ("36. CARTOON", ["cartoon network", "cartoon"]),
-    ("37. DUNIA ANAK", ["dunia anak"]),
-    ("38. SPACE TOON", ["spacetoon", "space toon"]),
-    ("39. NICKELODEON", ["nickelodeon"])
+# Daftar target channel yang Anda inginkan (Urutan 1 sampai 39 secara pasti)
+# Kita pasangkan nama channel dengan kata kunci unik yang ada di judulnya
+TARGET_CHANNELS = [
+    ("TVONE", ["tvone", "tv one"]),
+    ("RCTI", ["rcti"]),
+    ("MNCTV", ["mnctv", "mnc tv"]),
+    ("GTV", ["gtv", "global tv"]),
+    ("ANTV", ["antv"]),
+    ("TRANSTV", ["transtv", "trans tv"]),
+    ("TRANS7", ["trans7", "trans 7"]),
+    ("INDOSIAR", ["indosiar"]),
+    ("SCTV", ["sctv"]),
+    ("METRO", ["metrotv", "metro tv"]),
+    ("KOMPASTV", ["kompastv", "kompas tv"]),
+    ("CNN", ["cnn indonesia", "cnn j"]),
+    ("INEWS", ["inews"]),
+    ("RTV", ["rtv", "rajawalitv"]),
+    ("MDTV", ["mdtv"]),
+    ("JOWO", ["jowo", "channel jowo"]),
+    ("HANACARAKA", ["hanacaraka"]),
+    ("CNBC", ["cnbc indonesia", "cnbc"]),
+    ("SINDONEWS", ["sindonews"]),
+    ("MOJI", ["moji"]),
+    ("IDX", ["idx"]),
+    ("TVRI", ["tvri"]),
+    ("JAK TV", ["jaktv", "jak tv"]),
+    ("BTV", ["btv"]),
+    ("DAAI", ["daai"]),
+    ("INDONESIANA", ["indonesiana"]),
+    ("CARUBAN", ["caruban"]),
+    ("BANTEN", ["banten"]),
+    ("SPORTSTARS", ["sportstars 1", "sportstars ("]), # Pastikan spesifik agar tidak nyeret sportstars 2/3/4
+    ("SPORTSTARS 2", ["sportstars 2", "sportstars2"]),
+    ("SPORTSTARS 3", ["sportstars 3", "sportstars3"]),
+    ("SPORTSTARS 4", ["sportstars 4", "sportstars4"]),
+    ("SOCCER", ["soccer"]),
+    ("SPOTV", ["spotv 1", "spotv hd", "spotv("]), 
+    ("SPOTV2", ["spotv 2", "spotv2"]),
+    ("CARTOON", ["cartoon network"]),
+    ("DUNIA ANAK", ["dunia anak"]),
+    ("SPACE TOON", ["spacetoon", "space toon"]),
+    ("NICKELODEON", ["nickelodeon"])
 ]
-
-def find_exact_match(block_text):
-    block_lower = block_text.lower()
-    
-    # Cek satu per satu berdasarkan urutan prioritas 1 sampai 39
-    for index, (ch_name, keywords) in enumerate(EXACT_CHANNELS):
-        for kw in keywords:
-            # Pastikan pencocokan ada di baris judul/EXTINF atau atribut nama
-            if kw in block_lower:
-                # Filter pengecualian khusus untuk menghindari channel nyasar
-                if ch_name == "4. GTV" and 'gaming' in block_lower:
-                    continue
-                if ch_name == "12. CNN" and 'international' in block_lower:
-                    continue
-                return index
-    return 999
 
 def filter_m3u():
     print("Mengambil playlist dari file BASED...")
@@ -75,9 +59,10 @@ def filter_m3u():
     lines = content.splitlines()
     header = lines[0] if lines and lines[0].startswith("#EXTM3U") else "#EXTM3U"
     
-    # Menyimpan channel yang ditemukan sesuai slot urutannya
-    ordered_buckets = {i: [] for i in range(len(EXACT_CHANNELS))}
+    # Menyiapkan wadah penyimpanan berurutan dari indeks 0 sampai 38
+    sorted_channels = []
     
+    # Parsing file M3U per blok channel
     i = 1
     while i < len(lines):
         line = lines[i]
@@ -88,25 +73,61 @@ def filter_m3u():
                 block.append(lines[i])
                 i += 1
             
-            block_text = " ".join(block)
-            matched_index = find_exact_match(block_text)
+            # Ambil bagian judul channel saja (biasanya setelah tanda koma terakhir di baris EXTINF)
+            extinf_line = block[0]
+            if "," in extinf_line:
+                channel_title = extinf_line.split(",")[-1].strip().lower()
+            else:
+                channel_title = extinf_line.lower()
             
-            if matched_index != 999:
-                # Ambil yang pertama kali cocok untuk slot tersebut
-                if not ordered_buckets[matched_index]:
-                    ordered_buckets[matched_index].append(block)
+            # Cek kecocokan ketat hanya berdasarkan urutan TARGET_CHANNELS
+            matched_priority = 999
+            for idx, (ch_name, keywords) in enumerate(TARGET_CHANNELS):
+                found = False
+                for kw in keywords:
+                    # Cek apakah keyword ada di judul channel
+                    if kw in channel_title:
+                        # Aturan pengecualian ketat agar tidak salah tangkap
+                        if ch_name == "GTV" and 'gaming' in channel_title:
+                            continue
+                        if ch_name == "SPORTSTARS" and ("2" in channel_title or "3" in channel_title or "4" in channel_title):
+                            continue
+                        if ch_name == "SPOTV" and "2" in channel_title:
+                            continue
+                        found = True
+                        break
+                if found:
+                    matched_priority = idx
+                    break
+            
+            # Jika channel ini terdaftar di target kita, masukkan ke list sementara bersama nomor prioritasnya
+            if matched_priority != 999:
+                sorted_channels.append((matched_priority, block))
         else:
             i += 1
 
-    # Susun ulang secara berurutan dari 1 sampai 39
+    # Urutkan list berdasarkan nomor prioritas secara mutlak (dari 0 sampai 38)
+    sorted_channels.sort(key=lambda x: x[0])
+
+    # Hilangkan duplikat jika di file BASED ada channel kembar, ambil yang pertama saja per jenis
+    final_blocks = []
+    seen_indices = set()
+    for priority, block in sorted_channels:
+        if priority not in seen_indices:
+            seen_indices.add(priority)
+            final_blocks.append((priority, block))
+
+    # Susun ulang isi file output
     new_lines = [header]
-    for idx in range(len(EXACT_CHANNELS)):
-        if ordered_buckets[idx]:
-            new_lines.extend(ordered_buckets[idx][0])
+    # Agar benar-benar urut dari 0 sampai 38 meskipun ada yang kosong/tidak ada di BASED
+    for target_idx in range(len(TARGET_CHANNELS)):
+        for priority, block in final_blocks:
+            if priority == target_idx:
+                new_lines.extend(block)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(new_lines) + "\n")
-    print(f"Berhasil memperbarui {OUTPUT_FILE} dengan filter ketat.")
+    print("Filter dan pengurutan selesai.")
 
 if __name__ == "__main__":
     filter_m3u()
