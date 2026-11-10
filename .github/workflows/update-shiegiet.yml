@@ -3,7 +3,7 @@ name: Update Shiegiet Playlist
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 */6 * * *'
 
 jobs:
   update-playlist:
@@ -17,13 +17,10 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
-        run: pip install requests
-
       - name: Run filter script
         run: python filter_playlist.py
 
-      - name: Commit and push results
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
