@@ -1,46 +1,63 @@
 import urllib.request
-import re
 
 BASE_URL = "https://raw.githubusercontent.com/KrakalNobar/BASEPLAY/main/BASED"
 OUTPUT_FILE = "shiegiet"
 
-# Daftar target channel yang diinginkan secara persis (urutan 1 sampai 39)
-# Kita buat kamus/pola yang spesifik agar tidak menangkap channel lain yang namanya mirip
-TARGET_CHANNELS = [
-    "tvone", "rcti", "mnctv", "gtv", "antv", "transtv", "trans7", 
-    "indosiar", "sctv", "metro", "kompastv", "cnn", "inews", "rtv", 
-    "mdtv", "jowo", "hanacaraka", "cnbc", "sindonews", "moji", "idx", 
-    "tvri", "jak tv", "btv", "daai", "indonesiana", "caruban", "banten", 
-    "sportstars", "sportstars 2", "sportstars 3", "sportstars 4", 
-    "soccer", "spotv", "spotv2", "cartoon", "dunia anak", "space toon", "nickelodeon"
+# Daftar target channel dan kata kunci pencarian alternatifnya (tanpa spasi/fleksibel)
+# Format: ("Nama Urutan", [daftar kata kunci yang mungkin muncul di file BASED])
+CHANNEL_RULES = [
+    ("TVONE", ["tvone", "tv one"]),
+    ("RCTI", ["rcti"]),
+    ("MNCTV", ["mnctv", "mnc tv"]),
+    ("GTV", ["gtv"]),
+    ("ANTV", ["antv"]),
+    ("TRANSTV", ["transtv", "trans tv"]),
+    ("TRANS7", ["trans7", "trans 7"]),
+    ("INDOSIAR", ["indosiar"]),
+    ("SCTV", ["sctv"]),
+    ("METRO", ["metrotv", "metro tv", "metro"]),
+    ("KOMPASTV", ["kompastv", "kompas tv"]),
+    ("CNN", ["cnn indonesia", "cnn j", "cnn"]),
+    ("INEWS", ["inews", "i-news"]),
+    ("RTV", ["rtv"]),
+    ("MDTV", ["mdtv"]),
+    ("JOWO", ["jowo"]),
+    ("HANACARAKA", ["hanacaraka"]),
+    ("CNBC", ["cnbc"]),
+    ("SINDONEWS", ["sindonews"]),
+    ("MOJI", ["moji"]),
+    ("IDX", ["idx"]),
+    ("TVRI", ["tvri"]),
+    ("JAK TV", ["jaktv", "jak tv"]),
+    ("BTV", ["btv"]),
+    ("DAAI", ["daai"]),
+    ("INDONESIANA", ["indonesiana"]),
+    ("CARUBAN", ["caruban"]),
+    ("BANTEN", ["banten"]),
+    ("SPORTSTARS", ["sportstars"]),
+    ("SPORTSTARS 2", ["sportstars 2", "sportstars2"]),
+    ("SPORTSTARS 3", ["sportstars 3", "sportstars3"]),
+    ("SPORTSTARS 4", ["sportstars 4", "sportstars4"]),
+    ("SOCCER", ["soccer"]),
+    ("SPOTV", ["spotv"]),
+    ("SPOTV2", ["spotv2", "spotv 2"]),
+    ("CARTOON", ["cartoon"]),
+    ("DUNIA ANAK", ["dunia anak"]),
+    ("SPACE TOON", ["spacestoon", "space toon", "spacetoon"]),
+    ("NICKELODEON", ["nickelodeon"])
 ]
 
-def get_exact_matched_index(block_text):
-    # Membersihkan teks untuk pengecekan
+def find_channel_index(block_text):
     block_lower = block_text.lower()
     
-    # Ekstrak judul channel atau tvg-name/tvg-id untuk dicocokkan dengan ketat
-    for index, target in enumerate(TARGET_CHANNELS):
-        # Gunakan regex boundary \b agar pencocokan kata benar-benar pas 
-        # (contoh: 'mnc' tidak akan nyasar ke 'mongolian' atau 'mnc tv' ditangkap dengan tepat)
-        
-        # Penanganan khusus untuk nama pendek agar tidak keliru
-        if target == "mnc":
-            if 'mnc tv' in block_lower or 'mnctv' in block_lower or 'tvg-id="mnc' in block_lower:
-                if 'sindonews' not in block_lower: # Hindari sindonews terseret
-                    return index
-        elif target == "gtv":
-            if 'gtv' in block_lower and 'gaming' not in block_lower:
+    # Cek setiap aturan channel sesuai urutan prioritas
+    for index, (channel_name, keywords) in enumerate(CHANNEL_RULES):
+        for kw in keywords:
+            # Khusus GTV, pastikan bukan gaming tv
+            if channel_name == "GTV" and ('gtv' in block_lower and 'gaming' not in block_lower):
                 return index
-        elif target == "cnn":
-            if 'cnn indonesia' in block_lower or 'cnn j' in block_lower or block_lower.strip().endswith(',cnn') or 'cnn' in block_lower:
-                # Pastikan bukan cnn international yang tidak diinginkan jika ada, atau sesuaikan
-                if 'international' not in block_lower:
-                    return index
-        else:
-            # Pencocokan standar dengan batas kata yang jelas
-            pattern = r'\b' + re.escape(target) + r'\b'
-            if re.search(pattern, block_lower):
+            # Khusus METRO, pastikan bukan metro channel yang tidak diinginkan jika mau spesifik, tapi biarkan fleksibel dulu
+            elif channel_name != "GTV" and kw in block_lower:
                 return index
                 
     return 999
@@ -57,8 +74,7 @@ def filter_m3u():
     lines = content.splitlines()
     header = lines[0] if lines and lines[0].startswith("#EXTM3U") else "#EXTM3U"
     
-    # Simpan berdasarkan urutan index target agar susunannya dijamin rapi sesuai daftar
-    ordered_buckets = {i: [] for i in range(len(TARGET_CHANNELS))}
+    ordered_buckets = {i: [] for i in range(len(CHANNEL_RULES))}
     
     i = 1
     while i < len(lines):
@@ -70,28 +86,25 @@ def filter_m3u():
                 block.append(lines[i])
                 i += 1
             
-            # Gabungkan baris EXTINF dan URL di bawahnya untuk dianalisis
             block_text = " ".join(block)
-            matched_index = get_exact_matched_index(block_text)
+            matched_index = find_channel_index(block_text)
             
             if matched_index != 999:
-                # Masukkan ke dalam bucket urutan yang tepat (hanya ambil 1 atau yang paling akurat jika mau, atau masukkan semua yang cocok di posisi itu)
-                # Untuk menghindari duplikat ganda, kita bisa batasi atau masukkan
-                if not ordered_buckets[matched_index]: # Ambil kemunculan pertama yang valid untuk tiap channel
+                # Simpan item pertama yang cocok untuk masing-masing slot urutan
+                if not ordered_buckets[matched_index]:
                     ordered_buckets[matched_index].append(block)
         else:
             i += 1
 
-    # Susun kembali sesuai urutan prioritas 0 sampai 38
+    # Susun kembali sesuai urutan 1 sampai 39 secara presisi
     new_lines = [header]
-    for idx in range(len(TARGET_CHANNELS)):
+    for idx in range(len(CHANNEL_RULES)):
         if ordered_buckets[idx]:
-            # Ambil item pertama yang cocok untuk channel tersebut
             new_lines.extend(ordered_buckets[idx][0])
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write("\n".join(new_lines) + "\n")
-    print(f"Berhasil memperbarui {OUTPUT_FILE} dengan filter presisi tinggi.")
+    print(f"Berhasil memperbarui {OUTPUT_FILE} dengan urutan & keyword fleksibel.")
 
 if __name__ == "__main__":
     filter_m3u()
