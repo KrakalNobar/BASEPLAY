@@ -4,7 +4,7 @@ BASE_URL = "https://raw.githubusercontent.com/KrakalNobar/BASEPLAY/main/BASED"
 OUTPUT_SHIEGIET = "shiegiet"
 OUTPUT_ZAFRAN = "zafran"
 
-# 39 Channel Paket Ekonomi (Shiegiet)
+# 1. Daftar Channel Paket Ekonomi (Shiegiet)
 ECONOMY_CHANNELS = [
     ("TVONE", ["tvone", "tv one"]),
     ("RCTI", ["rcti"]),
@@ -25,49 +25,39 @@ ECONOMY_CHANNELS = [
     ("HANACARAKA", ["hanacaraka"]),
     ("CNBC", ["cnbc indonesia", "cnbc"]),
     ("SINDONEWS", ["sindonews"]),
-    ("MOJI", ["moji"]),
-    ("IDX", ["idx"]),
-    ("TVRI", ["tvri"]),
-    ("JAK TV", ["jaktv", "jak tv"]),
-    ("BTV", ["btv"]),
-    ("DAAI", ["daai"]),
-    ("INDONESIANA", ["indonesiana"]),
-    ("CARUBAN", ["caruban"]),
-    ("BANTEN", ["banten"]),
-    ("SPORTSTARS", ["sportstars 1", "sportstars ("]),
-    ("SPORTSTARS 2", ["sportstars 2", "sportstars2"]),
-    ("SPORTSTARS 3", ["sportstars 3", "sportstars3"]),
-    ("SPORTSTARS 4", ["sportstars 4", "sportstars4"]),
-    ("SOCCER", ["soccer"]),
-    ("SPOTV", ["spotv 1", "spotv hd", "spotv("]),
-    ("SPOTV2", ["spotv 2", "spotv2"]),
-    ("CARTOON", ["cartoon network"]),
-    ("DUNIA ANAK", ["dunia anak"]),
-    ("SPACE TOON", ["spacetoon", "space toon"]),
-    ("NICKELODEON", ["nickelodeon"])
 ]
 
-# Kata kunci tambahan untuk mendeteksi semua channel Sport/Olahraga di Zafran (Premium)
-SPORT_KEYWORDS = [
-    "sport", "soccer", "bein", "match", "arena", "bola", "futsal", 
-    "nba", "nfl", "golf", "tennis", "badminton", "race", "f1", 
-    "motogp", "fight", "wwe", "ufc", "espn", "champions"
+# 2. Tambahan Kategori Sport (Olahraga)
+SPORT_CHANNELS = [
+    ("SPORT", ["sport", "bein", "champions", "soccer", "football", "wwe", "ufc", "nba", "formula", "espn"])
 ]
+
+# 3. Tambahan Kategori Film (Bioskop/Movies)
+FILM_CHANNELS = [
+    ("FILM", ["film", "cinema", "movie", "boxoffice", "hbo", "fox movies", "axn", "celestial", "bioskop"])
+]
+
+# Zafran adalah gabungan dari Ekonomi + Sport + Film
+ZAFRAN_CHANNELS = ECONOMY_CHANNELS + SPORT_CHANNELS + FILM_CHANNELS
+
+def download_playlist():
+    req = urllib.request.Request(
+        BASE_URL,
+        headers={"User-Agent": "Mozilla/5.0"}
+    )
+    with urllib.request.urlopen(req) as response:
+        return response.read().decode("utf-8").splitlines()
 
 def process_playlists():
-    print("Mengambil playlist dari file BASED...")
-    try:
-        req = urllib.request.urlopen(BASE_URL)
-        content = req.read().decode('utf-8')
-    except Exception as e:
-        print(f"Gagal mengambil data: {e}")
+    lines = download_playlist()
+    if not lines:
         return
 
-    lines = content.splitlines()
-    header = lines[0] if lines and lines[0].startswith("#EXTM3U") else "#EXTM3U"
+    header = lines[0] if lines[0].startswith("#EXTM3U") else "#EXTM3U\n"
     
-    # Parsing semua blok channel yang ada di file BASED
-    all_parsed_channels = []
+    shiegiet_blocks = [header]
+    zafran_blocks = [header]
+
     i = 1
     while i < len(lines):
         line = lines[i]
@@ -78,60 +68,27 @@ def process_playlists():
                 block.append(lines[i])
                 i += 1
             
-            extinf_line = block[0]
-            channel_title = extinf_line.split(",")[-1].strip().lower() if "," in extinf_line else extinf_line.lower()
-            all_parsed_channels.append((channel_title, block))
+            block_text = "".join(block).lower()
+            
+            # Shiegiet hanya berisi channel ekonomi
+            if any(any(kw in block_text for kw in kws) for _, kws in ECONOMY_CHANNELS):
+                shiegiet_blocks.extend(block)
+                
+            # Zafran berisi gabungan Ekonomi + Sport + Film
+            if any(any(kw in block_text for kw in kws) for _, kws in ZAFRAN_CHANNELS):
+                zafran_blocks.extend(block)
         else:
             i += 1
 
-    # 1. Membentuk file SHIEGIET (Paket Ekonomi - Urut 1 s.d 39)
-    shiegiet_sorted = []
-    seen_indices = set()
-    
-    for target_idx, (ch_name, keywords) in enumerate(ECONOMY_CHANNELS):
-        found_block = None
-        for title, block in all_parsed_channels:
-            matched = False
-            for kw in keywords:
-                if kw in title:
-                    if ch_name == "GTV" and 'gaming' in title: continue
-                    if ch_name == "SPORTSTARS" and any(x in title for x in ["2", "3", "4"]): continue
-                    if ch_name == "SPOTV" and "2" in title: continue
-                    matched = True
-                    break
-            if matched:
-                found_block = block
-                break
-        if found_block and target_idx not in seen_indices:
-            seen_indices.add(target_idx)
-            shiegiet_sorted.append(found_block)
-
     # Simpan file shiegiet
-    shiegiet_lines = [header]
-    for b in shiegiet_sorted:
-        shiegiet_lines.extend(b)
     with open(OUTPUT_SHIEGIET, "w", encoding="utf-8") as f:
-        f.write("\n".join(shiegiet_lines) + "\n")
-
-    # 2. Membentuk file ZAFRAN (Paket Premium = Shiegiet + Semua Channel Sport Lainnya)
-    zafran_blocks = list(shiegiet_sorted) # Masukkan semua isi shiegiet dulu
-    zafran_added_titles = {t for t, _ in all_parsed_channels if any(any(kw in t for kw in kw_list) for _, kw_list in ECONOMY_CHANNELS)}
-
-    for title, block in all_parsed_channels:
-        # Jika judul mengandung kata kunci sport dan belum masuk ke zafran
-        if any(sport_kw in title for sport_kw in SPORT_KEYWORDS):
-            if title not in zafran_added_titles:
-                zafran_added_titles.add(title)
-                zafran_blocks.append(block)
-
-    # Simpan file zafran
-    zafran_lines = [header]
-    for b in zafran_blocks:
-        zafran_lines.extend(b)
+        f.writelines(shiegiet_blocks)
+        
+    # Simpan file zafran (Ekonomi + Sport + Film)
     with open(OUTPUT_ZAFRAN, "w", encoding="utf-8") as f:
-        f.write("\n".join(zafran_lines) + "\n")
+        f.writelines(zafran_blocks)
 
-    print("Berhasil memperbarui file 'shiegiet' dan 'zafran' secara otomatis!")
+    print("Filter playlist Zafran berhasil diperbarui dengan tambahan kategori Film & Sport!")
 
 if __name__ == "__main__":
     process_playlists()
