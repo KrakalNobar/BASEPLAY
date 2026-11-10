@@ -29,15 +29,14 @@ ECONOMY_CHANNELS = [
 
 # 2. Tambahan Kategori Sport (Olahraga)
 SPORT_CHANNELS = [
-    ("SPORT", ["sport", "bein", "champions", "soccer", "football", "wwe", "ufc", "nba", "formula", "espn"])
+    ("SPORT", ["sport", "bein", "champions", "soccer", "football", "wwe", "ufc", "nba", "formula", "espn", "bola"])
 ]
 
-# 3. Tambahan Kategori Film (Bioskop/Movies)
+# 3. Tambahan Kategori Film yang Lebih Luas
 FILM_CHANNELS = [
-    ("FILM", ["film", "cinema", "movie", "boxoffice", "hbo", "fox movies", "axn", "celestial", "bioskop"])
+    ("FILM", ["film", "cinema", "movie", "boxoffice", "hbo", "fox movies", "axn", "celestial", "bioskop", "movies", "cinemax", "paramount", "tlc"])
 ]
 
-# Zafran adalah gabungan dari Ekonomi + Sport + Film
 ZAFRAN_CHANNELS = ECONOMY_CHANNELS + SPORT_CHANNELS + FILM_CHANNELS
 
 def download_playlist():
@@ -51,12 +50,16 @@ def download_playlist():
 def process_playlists():
     lines = download_playlist()
     if not lines:
+        print("File BASED kosong atau gagal diunduh.")
         return
 
     header = lines[0] if lines[0].startswith("#EXTM3U") else "#EXTM3U\n"
     
     shiegiet_blocks = [header]
     zafran_blocks = [header]
+
+    count_shiegiet = 0
+    count_zafran = 0
 
     i = 1
     while i < len(lines):
@@ -70,25 +73,25 @@ def process_playlists():
             
             block_text = "".join(block).lower()
             
-            # Shiegiet hanya berisi channel ekonomi
+            # Cek Shiegiet
             if any(any(kw in block_text for kw in kws) for _, kws in ECONOMY_CHANNELS):
                 shiegiet_blocks.extend(block)
+                count_shiegiet += 1
                 
-            # Zafran berisi gabungan Ekonomi + Sport + Film
+            # Cek Zafran (Ekonomi + Sport + Film)
             if any(any(kw in block_text for kw in kws) for _, kws in ZAFRAN_CHANNELS):
                 zafran_blocks.extend(block)
+                count_zafran += 1
         else:
             i += 1
 
-    # Simpan file shiegiet
     with open(OUTPUT_SHIEGIET, "w", encoding="utf-8") as f:
         f.writelines(shiegiet_blocks)
         
-    # Simpan file zafran (Ekonomi + Sport + Film)
     with open(OUTPUT_ZAFRAN, "w", encoding="utf-8") as f:
         f.writelines(zafran_blocks)
 
-    print("Filter playlist Zafran berhasil diperbarui dengan tambahan kategori Film & Sport!")
+    print(f"Berhasil! Shiegiet: {count_shiegiet} channel, Zafran: {count_zafran} channel.")
 
 if __name__ == "__main__":
     process_playlists()
